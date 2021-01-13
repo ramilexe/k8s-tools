@@ -16,6 +16,12 @@ untouched and usable as is.
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
 
+### [kfilt](https://github.com/ryane/kfilt)
+
+**Version:** v0.0.5
+
+kfilt can filter Kubernetes resources.
+
 ## CI examples
 
 ### Gitlab
