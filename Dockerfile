@@ -10,9 +10,13 @@ ADD https://github.com/ryane/kfilt/releases/download/v${KFILT_VER}/kfilt_${KFILT
 
 ARG KUSTOMIZE_VER="v5.0.0"
 ADD https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VER}/kustomize_${KUSTOMIZE_VER}_linux_amd64.tar.gz .
+
+ARG KUBECT_VER="v1.26.1"
+ADD https://dl.k8s.io/release/${KUBECT_VER}/bin/linux/amd64/kubectl .
+
 RUN tar xzvf kustomize_${KUSTOMIZE_VER}_linux_amd64.tar.gz && \
     chmod +x ./kustomize && mv ./kustomize /usr/local/bin/kustomize && \
     chmod +x ./kfilt_${KFILT_VER}_linux_amd64 && mv ./kfilt_${KFILT_VER}_linux_amd64 /usr/local/bin/kfilt && \
+    chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl && \
     apk add --update --no-cache git openssh python3 py3-pip jq && \
     pip3 install yq
-

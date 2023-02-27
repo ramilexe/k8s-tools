@@ -20,6 +20,10 @@ kfilt can filter Kubernetes resources.
 
 **Version:** v3.1.1
 
+### kubectl
+
+**Version:** v1.26.1
+
 ## CI examples
 
 ### Gitlab
