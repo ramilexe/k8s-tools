@@ -4,23 +4,21 @@
 
 ### [Kustomize](https://github.com/kubernetes-sigs/kustomize)
 
-**Version:** v3.8.0
+**Version:** v5.0.0
 
 `kustomize` lets you customize raw, template-free YAML
 files for multiple purposes, leaving the original YAML
 untouched and usable as is.
 
-### [Argo CD](https://github.com/argoproj/argo-cd/)
-
-**Version:** v1.6.1
-
-Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
-
 ### [kfilt](https://github.com/ryane/kfilt)
 
-**Version:** v0.0.5
+**Version:** v0.0.7
 
 kfilt can filter Kubernetes resources.
+
+### yq (python version)
+
+**Version:** v3.1.1
 
 ## CI examples
 
@@ -35,7 +33,6 @@ deploy:
     - git add kustomization.yaml
     - git commit -m "Bump dev version to $CI_COMMIT_SHORT_SHA" || echo "No changes, nothing to commit!"
     - git push
-    - argocd app sync myappname --async
   only:
     - master
 ```
